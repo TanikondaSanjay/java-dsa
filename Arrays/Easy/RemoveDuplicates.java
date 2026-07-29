@@ -1,4 +1,5 @@
-package Arrays;
+package Arrays.Easy;
+
 import java.io.*;
 import java.util.StringTokenizer;
 public class RemoveDuplicates {

@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Easy;    
 import java.io.*;
 public class LargestElement {
     public int largest(int[] nums){

@@ -1,7 +1,8 @@
-package Arrays;
+package Arrays.Easy;
+
 import java.io.*;
 import java.util.StringTokenizer;
-public class SecondLargestElement{
+public class SecondLargestElement {
     public int secondMaxElement(int[] nums){
         int max = nums[1];
         int second_max = nums[0];

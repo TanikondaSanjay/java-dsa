@@ -1,24 +1,25 @@
-package Arrays;
-
+package Arrays.Easy;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class SingleNumber {
-    public int singleNumber(int[] nums){
+public class MaximumNumberofConsecutiveOnes {
+    public int MaxConsecutiveOnes(int[] nums){
+        int max_count = 0;
+        int count = 0;
         for(int i=0;i<nums.length;i++){
-            int count = 0;
-            for(int j=0;j<nums.length;j++){
-                if(nums[i] == nums[j]){
-                    count++;
-                }
+            if(nums[i] == 1){
+                count++;
             }
-            if(count == 1){
-                return nums[i];
+            else{
+                count = 0;
+            }
+            if(max_count < count ){
+                max_count = count;
             }
         }
-        return -1;
+        return max_count;
     }
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,7 +29,7 @@ public class SingleNumber {
         for(int i=0;i<n;i++){
             nums[i] = Integer.parseInt(st.nextToken());
         }
-        SingleNumber sn = new SingleNumber();
-        System.out.println(sn.singleNumber(nums));
+        MaximumNumberofConsecutiveOnes max = new MaximumNumberofConsecutiveOnes();
+        System.out.println(max.MaxConsecutiveOnes(nums));
     }
 }

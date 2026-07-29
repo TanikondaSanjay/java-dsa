@@ -1,8 +1,10 @@
-package Arrays;
+package Arrays.Easy;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
+
 public class UnionOfTwoSortedArrays {
     public int[] UnionArray(int[] nums1, int[] nums2) {
         int n1 = nums1.length;
